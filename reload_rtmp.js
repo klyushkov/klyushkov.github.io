@@ -9,14 +9,12 @@ function dump(obj) {
                                 window.skip = 0;
                                 var iframe = document.getElementById('camera');
                                 iframe.src = iframe.src;
-                                console.log("RELOAD");
                                 } else { window.skip += 1; }
                         }
         }
     } else {
         out = obj;
     }
-    console.log(out);
 }
 function listener(event) {
   dump(event.data);
