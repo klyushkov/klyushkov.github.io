@@ -1,0 +1,17 @@
+---
+layout: post
+title:  "The cheapest NVENC GPU: Quadro P400"
+date:   2021-10-13 10:56:25 +0000
+categories: homelab nvenc transcoder
+---
+
+I'm running NVENC transcoder based on FFmpeg and Rails in my home lab, it's automatically transcoding every input video file into an h264/aac suitable for viewing on Smart TV or any mobile browser.
+
+It's very similar to Plex Media Server, but it is fully free and works only within a web browser, no need for any iOS/Android/TV applications because I love it.
+
+Before today I've used GeForce 1050 Ti as a hardware-accelerated transcoder for my FFmpeg scripts, but now I've to reuse it for gaming purposes (thank you, miners!), so I started to find any alternative to GeForce 1050 Ti (Pascal, 4GB memory, NVENC!) and [I found](https://developer.nvidia.com/video-encode-and-decode-gpu-support-matrix-new) a card with close specifications: Pascal, 2GB memory, NVENC, but it's a professional card, have a lower power consumption and requires only 1 PCI slot.
+
+62$ (Quadro P400) against about 270$ (GeForce 1050 Ti), my choice is obvious. Now my home server has a lower power consumption, is cheaper and PCI-E x1 slot under x16 is free, but the transcoding performance is the same. Amazing.
+
+
+*P.S. NVENC GPUs older than Pascal have a poorer performance, more power consumption, and doesn't have any sense in 2021.*
